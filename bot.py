@@ -5,7 +5,7 @@
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-BOT_TOKEN = "8598197457:AAFEUTbUIkX5KNxABT7UkDzLxPqJWGKo8ZI"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 bot = telebot.TeleBot(BOT_TOKEN, parse_mode="Markdown")
 
@@ -152,3 +152,4 @@ def on_callback(call):
 if __name__ == "__main__":
     print("Bot iniciado. Pressione Ctrl+C para parar.")
     bot.infinity_polling()
+
